@@ -1,0 +1,9 @@
+D:\VS\winform_guilotine\winform_guilotine\bin\Debug\winform_guilotine.exe.config
+D:\VS\winform_guilotine\winform_guilotine\bin\Debug\winform_guilotine.exe
+D:\VS\winform_guilotine\winform_guilotine\bin\Debug\winform_guilotine.pdb
+D:\VS\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.csprojResolveAssemblyReference.cache
+D:\VS\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.Form_Main.resources
+D:\VS\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.Properties.Resources.resources
+D:\VS\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.csproj.GenerateResource.Cache
+D:\VS\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.exe
+D:\VS\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.pdb
