@@ -7,3 +7,6 @@ D:\VS\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.Properties
 D:\VS\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.csproj.GenerateResource.Cache
 D:\VS\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.exe
 D:\VS\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.pdb
+D:\Project\winform_guilotine\winform_guilotine\bin\Debug\winform_guilotine.exe.config
+D:\Project\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.exe
+D:\Project\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.pdb

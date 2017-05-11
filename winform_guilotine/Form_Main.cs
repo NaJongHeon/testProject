@@ -83,11 +83,11 @@ namespace winform_guilotine
             backlight.portOpen();
             if (backlight.objSerialPort.IsOpen)
             {
-                txt_BackLog.Text = "Front 조명 연결 성공\r\n" + txt_BackLog.Text;
+                txt_BackLog.Text = "Back 조명 연결 성공\r\n" + txt_BackLog.Text;
             }
             else
             {
-                txt_BackLog.Text = "Front 조명 연결 실패\r\n" + txt_BackLog.Text;
+                txt_BackLog.Text = "Back 조명 연결 실패\r\n" + txt_BackLog.Text;
             }
         }
 
