@@ -31,18 +31,22 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_LightLog = new System.Windows.Forms.TextBox();
             this.scr_FrontValue = new System.Windows.Forms.HScrollBar();
             this.btn_FrontSet = new System.Windows.Forms.Button();
             this.txt_FrontValue = new System.Windows.Forms.TextBox();
+            this.txt_LightLog = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.scr_BackValue = new System.Windows.Forms.HScrollBar();
             this.btn_BackSet = new System.Windows.Forms.Button();
             this.txt_BackValue = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.scr_BackValue = new System.Windows.Forms.HScrollBar();
             this.btn_FrontRetry = new System.Windows.Forms.Button();
             this.btn_BackRetry = new System.Windows.Forms.Button();
+            this.btn_FrontOn = new System.Windows.Forms.Button();
+            this.btn_FrontOff = new System.Windows.Forms.Button();
+            this.btn_BackOff = new System.Windows.Forms.Button();
+            this.btn_BackOn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +54,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.btn_FrontOff);
+            this.groupBox1.Controls.Add(this.btn_FrontOn);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.scr_FrontValue);
@@ -85,15 +91,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "0(밝음)";
             // 
-            // txt_LightLog
-            // 
-            this.txt_LightLog.Location = new System.Drawing.Point(12, 11);
-            this.txt_LightLog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_LightLog.Multiline = true;
-            this.txt_LightLog.Name = "txt_LightLog";
-            this.txt_LightLog.Size = new System.Drawing.Size(625, 130);
-            this.txt_LightLog.TabIndex = 7;
-            // 
             // scr_FrontValue
             // 
             this.scr_FrontValue.Location = new System.Drawing.Point(18, 44);
@@ -126,9 +123,20 @@
             this.txt_FrontValue.Text = "0";
             this.txt_FrontValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // txt_LightLog
+            // 
+            this.txt_LightLog.Location = new System.Drawing.Point(12, 11);
+            this.txt_LightLog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_LightLog.Multiline = true;
+            this.txt_LightLog.Name = "txt_LightLog";
+            this.txt_LightLog.Size = new System.Drawing.Size(625, 130);
+            this.txt_LightLog.TabIndex = 7;
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.btn_BackOff);
+            this.groupBox2.Controls.Add(this.btn_BackOn);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.btn_BackSet);
             this.groupBox2.Controls.Add(this.txt_BackValue);
@@ -155,24 +163,6 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "255(어두움)";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 14);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "0(밝음)";
-            // 
-            // scr_BackValue
-            // 
-            this.scr_BackValue.Location = new System.Drawing.Point(17, 44);
-            this.scr_BackValue.Maximum = 264;
-            this.scr_BackValue.Name = "scr_BackValue";
-            this.scr_BackValue.Size = new System.Drawing.Size(262, 30);
-            this.scr_BackValue.TabIndex = 6;
-            this.scr_BackValue.Scroll += new System.Windows.Forms.ScrollEventHandler(this.scr_BackValue_Scroll);
-            // 
             // btn_BackSet
             // 
             this.btn_BackSet.ForeColor = System.Drawing.Color.Black;
@@ -196,6 +186,24 @@
             this.txt_BackValue.Text = "0";
             this.txt_BackValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 14);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "0(밝음)";
+            // 
+            // scr_BackValue
+            // 
+            this.scr_BackValue.Location = new System.Drawing.Point(17, 44);
+            this.scr_BackValue.Maximum = 264;
+            this.scr_BackValue.Name = "scr_BackValue";
+            this.scr_BackValue.Size = new System.Drawing.Size(262, 30);
+            this.scr_BackValue.TabIndex = 6;
+            this.scr_BackValue.Scroll += new System.Windows.Forms.ScrollEventHandler(this.scr_BackValue_Scroll);
+            // 
             // btn_FrontRetry
             // 
             this.btn_FrontRetry.Location = new System.Drawing.Point(95, 336);
@@ -215,6 +223,46 @@
             this.btn_BackRetry.Text = "Back Connect Retry";
             this.btn_BackRetry.UseVisualStyleBackColor = true;
             this.btn_BackRetry.Click += new System.EventHandler(this.btn_BackRetry_Click);
+            // 
+            // btn_FrontOn
+            // 
+            this.btn_FrontOn.Location = new System.Drawing.Point(18, 125);
+            this.btn_FrontOn.Name = "btn_FrontOn";
+            this.btn_FrontOn.Size = new System.Drawing.Size(101, 56);
+            this.btn_FrontOn.TabIndex = 10;
+            this.btn_FrontOn.Text = "Light On";
+            this.btn_FrontOn.UseVisualStyleBackColor = true;
+            this.btn_FrontOn.Click += new System.EventHandler(this.btn_FrontOn_Click);
+            // 
+            // btn_FrontOff
+            // 
+            this.btn_FrontOff.Location = new System.Drawing.Point(179, 123);
+            this.btn_FrontOff.Name = "btn_FrontOff";
+            this.btn_FrontOff.Size = new System.Drawing.Size(101, 56);
+            this.btn_FrontOff.TabIndex = 11;
+            this.btn_FrontOff.Text = "Light Off";
+            this.btn_FrontOff.UseVisualStyleBackColor = true;
+            this.btn_FrontOff.Click += new System.EventHandler(this.btn_FrontOff_Click);
+            // 
+            // btn_BackOff
+            // 
+            this.btn_BackOff.Location = new System.Drawing.Point(178, 121);
+            this.btn_BackOff.Name = "btn_BackOff";
+            this.btn_BackOff.Size = new System.Drawing.Size(101, 56);
+            this.btn_BackOff.TabIndex = 13;
+            this.btn_BackOff.Text = "Light Off";
+            this.btn_BackOff.UseVisualStyleBackColor = true;
+            this.btn_BackOff.Click += new System.EventHandler(this.btn_BackOff_Click);
+            // 
+            // btn_BackOn
+            // 
+            this.btn_BackOn.Location = new System.Drawing.Point(17, 123);
+            this.btn_BackOn.Name = "btn_BackOn";
+            this.btn_BackOn.Size = new System.Drawing.Size(101, 56);
+            this.btn_BackOn.TabIndex = 12;
+            this.btn_BackOn.Text = "Light On";
+            this.btn_BackOn.UseVisualStyleBackColor = true;
+            this.btn_BackOn.Click += new System.EventHandler(this.btn_BackOn_Click);
             // 
             // Form_Main
             // 
@@ -255,6 +303,10 @@
         private System.Windows.Forms.TextBox txt_BackValue;
         private System.Windows.Forms.Button btn_FrontRetry;
         private System.Windows.Forms.Button btn_BackRetry;
+        private System.Windows.Forms.Button btn_FrontOff;
+        private System.Windows.Forms.Button btn_FrontOn;
+        private System.Windows.Forms.Button btn_BackOff;
+        private System.Windows.Forms.Button btn_BackOn;
     }
 }
 

@@ -39,6 +39,7 @@ namespace winform_guilotine
                 listFront.Add(x);
             }
             setEnableList(0, false);
+
             bIsConnFront = conntry(0);
             if (bIsConnFront)
             {
@@ -59,6 +60,7 @@ namespace winform_guilotine
                 listBack.Add(x);
             }
             setEnableList(1, false);
+
             bIsConnBack = conntry(1);
             if (bIsConnBack)
             {
@@ -201,6 +203,17 @@ namespace winform_guilotine
                 btn_FrontRetry.Visible = true;
             }
         }
+
+        private void btn_FrontOn_Click(object sender, EventArgs e)
+        {
+            frontlight.sendData("a1");
+        }
+
+        private void btn_FrontOff_Click(object sender, EventArgs e)
+        {
+            frontlight.sendData("a0");
+        }
+
         #endregion
 
         #region BackLight Event
@@ -252,10 +265,20 @@ namespace winform_guilotine
                 btn_BackRetry.Visible = true;
             }
         }
+
+        private void btn_BackOn_Click(object sender, EventArgs e)
+        {
+            frontlight.sendData("b1");
+        }
+
+        private void btn_BackOff_Click(object sender, EventArgs e)
+        {
+            frontlight.sendData("b0");
+        }
+
+
         #endregion
 
-        
 
-        
     }
 }

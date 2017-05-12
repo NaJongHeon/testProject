@@ -16,3 +16,12 @@ D:\Project\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.cspro
 D:\Project\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.Form_Main.resources
 D:\Project\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.Properties.Resources.resources
 D:\Project\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.csproj.GenerateResource.Cache
+D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\bin\Debug\winform_guilotine.exe.config
+D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.exe
+D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.pdb
+D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\bin\Debug\winform_guilotine.exe
+D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\bin\Debug\winform_guilotine.pdb
+D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.csprojResolveAssemblyReference.cache
+D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.Form_Main.resources
+D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.Properties.Resources.resources
+D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.csproj.GenerateResource.Cache
