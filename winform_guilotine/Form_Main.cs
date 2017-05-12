@@ -118,6 +118,7 @@ namespace winform_guilotine
                     if (backlight.objSerialPort.IsOpen)
                     {
                         txt_LightLog.Text = "Back 조명 연결 성공\r\n" + txt_LightLog.Text;
+                        res = true;
                     }
                     else
                     {
