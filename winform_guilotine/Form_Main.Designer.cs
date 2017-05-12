@@ -348,7 +348,7 @@
             this.txt_servoPort.Name = "txt_servoPort";
             this.txt_servoPort.Size = new System.Drawing.Size(62, 23);
             this.txt_servoPort.TabIndex = 19;
-            this.txt_servoPort.Text = "COM3";
+            this.txt_servoPort.Text = "3";
             this.txt_servoPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txt_POSError

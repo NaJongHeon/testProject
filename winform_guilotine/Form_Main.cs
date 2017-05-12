@@ -88,6 +88,10 @@ namespace winform_guilotine
             }
             #endregion
             //서보 초기화
+            m_nPortNo = 0;
+            m_bConnected = false;
+            Thread getPos = new Thread(new ThreadStart(run2));
+            getPos.Start();
             txt_Position.Text = "0";
             txt_Speed.Text = "50000";
             txt_RepeatDelay.Text = "100";
@@ -359,6 +363,31 @@ namespace winform_guilotine
 
         }
 
+        public void run2()  //POS Data 가져오기
+        {
+            try
+            {
+                m_stop = false;
+                while (!m_stop)
+                {
+                    if (m_bConnected)
+                    {
+                        FAS_EziMOTIONPlusR.FAS_GetActualPos(m_nPortNo, byte.Parse(txt_Slave.Text), ref m_PosAct);
+                        SettextAct(m_PosAct.ToString());
+                        FAS_EziMOTIONPlusR.FAS_GetCommandPos(m_nPortNo, byte.Parse(txt_Slave.Text), ref m_PosCom);
+                        SettextCom(m_PosCom.ToString());
+                        SettextErr((m_PosAct - m_PosCom).ToString());
+                        Thread.Sleep(1);
+                    }
+
+                }
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
         private void SettextAct(string text)
         {
             try
@@ -480,7 +509,7 @@ namespace winform_guilotine
                     //    if (btnGroup_Servoset[iLoof] != null)
                     //        btnGroup_Servoset[iLoof].Enabled = false;
                     //}
-                    //btn_ServoConn.Enabled = true;
+                    btn_ServoConn.Enabled = true;
                 }
                 else
                 {
