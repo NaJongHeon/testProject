@@ -9,12 +9,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace winform_guilotine
 {
     public partial class Form_Main : Form
     {
         ClassSerialPort backlight;
         ClassSerialPort frontlight;
+        Matrox objMatrox;
 
         List<Control> listFront;
         List<Control> listBack;
@@ -25,7 +27,7 @@ namespace winform_guilotine
         bool bIsConnBack = false;
         #region 서보관련변수
         byte m_nPortNo;
-        bool m_bConnected;
+        bool m_bConnected, m_stop;
         int m_mouseDown = 0;  //0 : None 1: jog- 2: jog+
         int m_PosAct = 0;
         int m_PosCom = 0;
@@ -484,7 +486,7 @@ namespace winform_guilotine
                 }
             }
         }
-        #endregion
+
         private void btn_ServoConn_Click(object sender, EventArgs e)
         {
             if (txt_servoPort.Text == null)
@@ -645,5 +647,24 @@ namespace winform_guilotine
             Thread gorepeat = new Thread(new ThreadStart(thr_repeat));
             gorepeat.Start();
         }
+        #endregion
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            objMatrox.snap();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            objMatrox.save();
+        }
+
+        private void btn_camInit_Click(object sender, EventArgs e)
+        {
+            objMatrox.Initialize();
+        }
+
+
     }
 }

@@ -77,9 +77,14 @@
             this.txt_Position = new System.Windows.Forms.TextBox();
             this.btn_ServoOn = new System.Windows.Forms.Button();
             this.btn_ServoConn = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btn_camInit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -629,12 +634,60 @@
             this.btn_ServoConn.UseVisualStyleBackColor = true;
             this.btn_ServoConn.Click += new System.EventHandler(this.btn_ServoConn_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.btn_camInit);
+            this.groupBox4.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.Location = new System.Drawing.Point(643, 1);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(389, 385);
+            this.groupBox4.TabIndex = 11;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Cam";
+            // 
+            // btn_camInit
+            // 
+            this.btn_camInit.ForeColor = System.Drawing.Color.Black;
+            this.btn_camInit.Location = new System.Drawing.Point(285, 331);
+            this.btn_camInit.Name = "btn_camInit";
+            this.btn_camInit.Size = new System.Drawing.Size(90, 41);
+            this.btn_camInit.TabIndex = 1;
+            this.btn_camInit.Text = "Cam Init";
+            this.btn_camInit.UseVisualStyleBackColor = true;
+            this.btn_camInit.Click += new System.EventHandler(this.btn_camInit_Click);
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(285, 265);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 41);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Snap";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(285, 209);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 41);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1048, 638);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_BackRetry);
             this.Controls.Add(this.btn_FrontRetry);
@@ -649,6 +702,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -705,6 +759,10 @@
         private System.Windows.Forms.Button btn_ServoOn;
         private System.Windows.Forms.Button btn_ServoConn;
         private System.Windows.Forms.TextBox txt_servoPort;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btn_camInit;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

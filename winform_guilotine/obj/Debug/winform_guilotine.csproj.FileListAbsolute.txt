@@ -25,3 +25,5 @@ D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\obj\Debug\winform_guil
 D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.Form_Main.resources
 D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.Properties.Resources.resources
 D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\obj\Debug\winform_guilotine.csproj.GenerateResource.Cache
+D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\bin\Debug\Matrox.MatroxImagingLibrary.dll
+D:\Project\NaJongHeon\winform_guilotine\winform_guilotine\bin\Debug\Matrox.MatroxImagingLibrary.xml
