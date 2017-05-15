@@ -78,13 +78,16 @@
             this.btn_ServoOn = new System.Windows.Forms.Button();
             this.btn_ServoConn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_saveimg = new System.Windows.Forms.Button();
+            this.btn_grabStart = new System.Windows.Forms.Button();
             this.btn_camInit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_grabStop = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -636,8 +639,10 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.btn_grabStop);
+            this.groupBox4.Controls.Add(this.pictureBox1);
+            this.groupBox4.Controls.Add(this.btn_saveimg);
+            this.groupBox4.Controls.Add(this.btn_grabStart);
             this.groupBox4.Controls.Add(this.btn_camInit);
             this.groupBox4.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
@@ -648,10 +653,40 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Cam";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(6, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(369, 238);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_saveimg
+            // 
+            this.btn_saveimg.ForeColor = System.Drawing.Color.Black;
+            this.btn_saveimg.Location = new System.Drawing.Point(11, 330);
+            this.btn_saveimg.Name = "btn_saveimg";
+            this.btn_saveimg.Size = new System.Drawing.Size(90, 41);
+            this.btn_saveimg.TabIndex = 3;
+            this.btn_saveimg.Text = "Save";
+            this.btn_saveimg.UseVisualStyleBackColor = true;
+            this.btn_saveimg.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btn_grabStart
+            // 
+            this.btn_grabStart.ForeColor = System.Drawing.Color.Black;
+            this.btn_grabStart.Location = new System.Drawing.Point(107, 275);
+            this.btn_grabStart.Name = "btn_grabStart";
+            this.btn_grabStart.Size = new System.Drawing.Size(90, 41);
+            this.btn_grabStart.TabIndex = 2;
+            this.btn_grabStart.Text = "Grab Start";
+            this.btn_grabStart.UseVisualStyleBackColor = true;
+            this.btn_grabStart.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btn_camInit
             // 
             this.btn_camInit.ForeColor = System.Drawing.Color.Black;
-            this.btn_camInit.Location = new System.Drawing.Point(285, 331);
+            this.btn_camInit.Location = new System.Drawing.Point(11, 273);
             this.btn_camInit.Name = "btn_camInit";
             this.btn_camInit.Size = new System.Drawing.Size(90, 41);
             this.btn_camInit.TabIndex = 1;
@@ -659,27 +694,16 @@
             this.btn_camInit.UseVisualStyleBackColor = true;
             this.btn_camInit.Click += new System.EventHandler(this.btn_camInit_Click);
             // 
-            // button1
+            // btn_grabStop
             // 
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(285, 265);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 41);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Snap";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(285, 209);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 41);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_grabStop.ForeColor = System.Drawing.Color.Black;
+            this.btn_grabStop.Location = new System.Drawing.Point(203, 275);
+            this.btn_grabStop.Name = "btn_grabStop";
+            this.btn_grabStop.Size = new System.Drawing.Size(98, 41);
+            this.btn_grabStop.TabIndex = 14;
+            this.btn_grabStop.Text = "Grab Stop";
+            this.btn_grabStop.UseVisualStyleBackColor = true;
+            this.btn_grabStop.Click += new System.EventHandler(this.btn_grabStop_Click);
             // 
             // Form_Main
             // 
@@ -703,6 +727,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -761,8 +786,10 @@
         private System.Windows.Forms.TextBox txt_servoPort;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btn_camInit;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_grabStart;
+        private System.Windows.Forms.Button btn_saveimg;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_grabStop;
     }
 }
 

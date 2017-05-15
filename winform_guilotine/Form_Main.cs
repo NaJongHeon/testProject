@@ -42,6 +42,7 @@ namespace winform_guilotine
         private void Initialize()
         {
             //Class 할당
+            objMatrox = new Matrox();
             backlight = new ClassSerialPort();
             frontlight = new ClassSerialPort();
 
@@ -658,6 +659,11 @@ namespace winform_guilotine
         private void button2_Click(object sender, EventArgs e)
         {
             objMatrox.save();
+        }
+
+        private void btn_grabStop_Click(object sender, EventArgs e)
+        {
+            objMatrox.stop();
         }
 
         private void btn_camInit_Click(object sender, EventArgs e)
