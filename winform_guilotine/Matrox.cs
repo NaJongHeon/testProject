@@ -6,52 +6,44 @@ using System.Threading.Tasks;
 using Matrox.MatroxImagingLibrary;
 
 
-
-
 namespace winform_guilotine
 {
     
     public class Matrox
     {
-        
 
-        // Member variables
-        public static MIL_ID MilApplication = MIL.M_NULL;       // Application identifier.
-        public static MIL_ID MilSystem = MIL.M_NULL;       // System identifier.     
-        public static MIL_ID MilDisplay = MIL.M_NULL;       // Display identifier.    
-        public static MIL_ID MilDigitizer = MIL.M_NULL;       // Digitizer identifier.  
-        public static MIL_ID MilImage = MIL.M_NULL;       // Image identifier.
-        public static MIL_ID MilRecord = MIL.M_NULL;       // 8 bit Pointer only for Video Recording.
-        public MIL_INT MilINT = MIL.M_NULL;
-        public MIL_INT NbPixelsPtr = MIL.M_NULL;
-        MIL_ID MilImageDisp = MIL.M_NULL;
-        MIL_ID[] MilGrabBufferList = new MIL_ID[1024];
         public void Initialize()
         {
-            string MilSystemDet = "";
-            MilSystemDet = Environment.GetEnvironmentVariable("Mil_Path");
-            if (MilSystemDet != null)
-            {
-                string dcfFilePath = "";
+            MIL_ID MilApplication = MIL.M_NULL;     // Application identifier.
+            MIL_ID MilSystem = MIL.M_NULL;          // System identifier.
+            MIL_ID MilDisplay = MIL.M_NULL;         // Display identifier.
+            MIL_ID MilImage = MIL.M_NULL;           // Image buffer identifier.
 
-                MIL.MdigAlloc(MilSystem, MIL.M_DEFAULT, dcfFilePath, MIL.M_DEFAULT, ref MilDigitizer);
-                MIL.MbufAlloc2d(MilSystem, MIL.MdigInquire(MilDigitizer, MIL.M_SIZE_X, MIL.M_NULL),
-                MIL.MdigInquire(MilDigitizer, MIL.M_SIZE_Y, MIL.M_NULL), 8 + MIL.M_UNSIGNED, MIL.M_IMAGE + MIL.M_DISP + MIL.M_GRAB, ref MilImage);
-                MIL.MdispAlloc(MilSystem, MIL.M_DEFAULT, ("M_DEFAULT"), MIL.M_DEFAULT, ref MilDisplay);
-                MIL.MdigHalt(MilDigitizer);
+            // Allocate a default MIL application, system, display and image.
+            MIL.MappAllocDefault(MIL.M_DEFAULT, ref MilApplication, ref MilSystem, ref MilDisplay, MIL.M_NULL, ref MilImage);
+
+            // If no allocation errors.
+            if (MIL.MappGetError(MIL.M_DEFAULT, MIL.M_GLOBAL, MIL.M_NULL) == 0)
+            {
+                // Perform graphic operations in the display image.
+                MIL.MgraColor(MIL.M_DEFAULT, 0xF0);
+                MIL.MgraFont(MIL.M_DEFAULT, MIL.M_FONT_DEFAULT_LARGE);
+                MIL.MgraText(MIL.M_DEFAULT, MilImage, 160L, 230L, " Welcome to MIL !!! ");
+                MIL.MgraColor(MIL.M_DEFAULT, 0xC0);
+                MIL.MgraRect(MIL.M_DEFAULT, MilImage, 100, 150, 530, 340);
+                MIL.MgraRect(MIL.M_DEFAULT, MilImage, 120, 170, 510, 320);
+                MIL.MgraRect(MIL.M_DEFAULT, MilImage, 140, 190, 490, 300);
             }
+
         }
         public void snap()
         {
-            MIL.MbufClear(MilImage, 0);
-            MIL.MdigGrabContinuous(MilDigitizer, MilImage);
-            MIL.MdispControl(MilDisplay, MIL.M_VIEW_MODE, MIL.M_AUTO_SCALE);
-            MIL.MdispControl(MilDisplay, MIL.M_SCALE_DISPLAY, MIL.M_ENABLE);
+
         }
 
         public void save()
         {
-            MIL.MbufSave("D:\test", MilImage);
+
         }
     }
 }

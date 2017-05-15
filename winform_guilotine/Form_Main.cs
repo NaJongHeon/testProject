@@ -42,6 +42,7 @@ namespace winform_guilotine
         private void Initialize()
         {
             //Class 할당
+            objMatrox = new Matrox();
             backlight = new ClassSerialPort();
             frontlight = new ClassSerialPort();
 
