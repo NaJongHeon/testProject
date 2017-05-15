@@ -11,6 +11,7 @@ namespace winform_guilotine
 
     public class Matrox
     {
+<<<<<<< HEAD
         MIL_ID MilApplication;
         MIL_ID MilSystem;
         MIL_ID MilDisplay;
@@ -26,6 +27,16 @@ namespace winform_guilotine
             MilDigitizer     = MIL.M_NULL;           // Digitizer identifier.
             MilImage         = MIL.M_NULL;           // Image buffer identifier.
             
+=======
+
+        public void Initialize()
+        {
+            MIL_ID MilApplication = MIL.M_NULL;     // Application identifier.
+            MIL_ID MilSystem = MIL.M_NULL;          // System identifier.
+            MIL_ID MilDisplay = MIL.M_NULL;         // Display identifier.
+            MIL_ID MilImage = MIL.M_NULL;           // Image buffer identifier.
+
+>>>>>>> 8bfb7ef581972dc94b93881065ab192d5de907d2
             // Allocate a default MIL application, system, display and image.
             MIL.MappAllocDefault(MIL.M_DEFAULT, ref MilApplication, ref MilSystem, ref MilDisplay, MIL.M_NULL, ref MilImage);
 
@@ -42,6 +53,7 @@ namespace winform_guilotine
                 MIL.MgraRect(MIL.M_DEFAULT, MilImage, 140, 190, 490, 300);
             }
 
+<<<<<<< HEAD
 
         }
         public void snap()
@@ -56,11 +68,21 @@ namespace winform_guilotine
         public void stop()
         {
             MIL.MdigHalt(MilDigitizer);
+=======
+        }
+        public void snap()
+        {
+
+>>>>>>> 8bfb7ef581972dc94b93881065ab192d5de907d2
         }
 
         public void save()
         {
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> 8bfb7ef581972dc94b93881065ab192d5de907d2
         }
     }
 }
