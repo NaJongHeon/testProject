@@ -645,6 +645,12 @@ namespace winform_guilotine
             Thread gorepeat = new Thread(new ThreadStart(thr_repeat));
             gorepeat.Start();
         }
+<<<<<<< HEAD
+=======
+<<<<<<< master
+=======
+        #endregion
+>>>>>>> 9af53f83d08b08cabff524092083fe6e5c967a40
 
 
         private void Form_Main_FormClosing(object sender, FormClosingEventArgs e)
@@ -665,5 +671,10 @@ namespace winform_guilotine
             m_stop = true;
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> local
+>>>>>>> 9af53f83d08b08cabff524092083fe6e5c967a40
     }
 }

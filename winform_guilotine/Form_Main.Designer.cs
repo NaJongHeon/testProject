@@ -634,8 +634,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+<<<<<<< master
             this.ClientSize = new System.Drawing.Size(1048, 638);
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(986, 638);
+=======
+=======
+            this.ClientSize = new System.Drawing.Size(986, 638);
+>>>>>>> local
+>>>>>>> 9af53f83d08b08cabff524092083fe6e5c967a40
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_BackRetry);
             this.Controls.Add(this.btn_FrontRetry);
