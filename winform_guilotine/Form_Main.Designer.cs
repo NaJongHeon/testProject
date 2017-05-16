@@ -336,7 +336,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(1020, 242);
+            this.groupBox3.Size = new System.Drawing.Size(965, 242);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Servo_Control";
@@ -353,7 +353,7 @@
             // 
             // txt_POSError
             // 
-            this.txt_POSError.Location = new System.Drawing.Point(916, 102);
+            this.txt_POSError.Location = new System.Drawing.Point(868, 104);
             this.txt_POSError.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_POSError.Name = "txt_POSError";
             this.txt_POSError.ReadOnly = true;
@@ -363,7 +363,7 @@
             // 
             // txt_POSCommand
             // 
-            this.txt_POSCommand.Location = new System.Drawing.Point(916, 54);
+            this.txt_POSCommand.Location = new System.Drawing.Point(868, 56);
             this.txt_POSCommand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_POSCommand.Name = "txt_POSCommand";
             this.txt_POSCommand.ReadOnly = true;
@@ -373,7 +373,7 @@
             // 
             // txt_RepeatDelay
             // 
-            this.txt_RepeatDelay.Location = new System.Drawing.Point(682, 128);
+            this.txt_RepeatDelay.Location = new System.Drawing.Point(655, 131);
             this.txt_RepeatDelay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_RepeatDelay.Name = "txt_RepeatDelay";
             this.txt_RepeatDelay.Size = new System.Drawing.Size(90, 23);
@@ -383,7 +383,7 @@
             // btn_StartRepeat
             // 
             this.btn_StartRepeat.ForeColor = System.Drawing.Color.Black;
-            this.btn_StartRepeat.Location = new System.Drawing.Point(579, 193);
+            this.btn_StartRepeat.Location = new System.Drawing.Point(527, 158);
             this.btn_StartRepeat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_StartRepeat.Name = "btn_StartRepeat";
             this.btn_StartRepeat.Size = new System.Drawing.Size(192, 46);
@@ -394,7 +394,7 @@
             // 
             // txt_RepeatCount
             // 
-            this.txt_RepeatCount.Location = new System.Drawing.Point(682, 102);
+            this.txt_RepeatCount.Location = new System.Drawing.Point(655, 105);
             this.txt_RepeatCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_RepeatCount.Name = "txt_RepeatCount";
             this.txt_RepeatCount.Size = new System.Drawing.Size(90, 23);
@@ -404,7 +404,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(533, 128);
+            this.label16.Location = new System.Drawing.Point(506, 131);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(49, 14);
             this.label16.TabIndex = 13;
@@ -413,7 +413,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(533, 104);
+            this.label15.Location = new System.Drawing.Point(506, 107);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(123, 14);
             this.label15.TabIndex = 13;
@@ -422,7 +422,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(533, 58);
+            this.label14.Location = new System.Drawing.Point(506, 61);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(93, 14);
             this.label14.TabIndex = 13;
@@ -431,7 +431,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(797, 105);
+            this.label19.Location = new System.Drawing.Point(749, 107);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(104, 14);
             this.label19.TabIndex = 13;
@@ -440,7 +440,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(797, 58);
+            this.label18.Location = new System.Drawing.Point(749, 60);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(120, 14);
             this.label18.TabIndex = 13;
@@ -449,7 +449,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(797, 31);
+            this.label17.Location = new System.Drawing.Point(749, 33);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(94, 14);
             this.label17.TabIndex = 13;
@@ -458,7 +458,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(533, 31);
+            this.label13.Location = new System.Drawing.Point(506, 34);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(100, 14);
             this.label13.TabIndex = 13;
@@ -466,7 +466,7 @@
             // 
             // txt_RepeatEnd
             // 
-            this.txt_RepeatEnd.Location = new System.Drawing.Point(682, 55);
+            this.txt_RepeatEnd.Location = new System.Drawing.Point(655, 58);
             this.txt_RepeatEnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_RepeatEnd.Name = "txt_RepeatEnd";
             this.txt_RepeatEnd.Size = new System.Drawing.Size(90, 23);
@@ -475,7 +475,7 @@
             // 
             // txt_POSActual
             // 
-            this.txt_POSActual.Location = new System.Drawing.Point(916, 29);
+            this.txt_POSActual.Location = new System.Drawing.Point(868, 31);
             this.txt_POSActual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_POSActual.Name = "txt_POSActual";
             this.txt_POSActual.ReadOnly = true;
@@ -485,7 +485,7 @@
             // 
             // txt_RepeatStart
             // 
-            this.txt_RepeatStart.Location = new System.Drawing.Point(682, 29);
+            this.txt_RepeatStart.Location = new System.Drawing.Point(655, 32);
             this.txt_RepeatStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_RepeatStart.Name = "txt_RepeatStart";
             this.txt_RepeatStart.Size = new System.Drawing.Size(90, 23);
@@ -495,7 +495,7 @@
             // btn_Origin
             // 
             this.btn_Origin.ForeColor = System.Drawing.Color.Black;
-            this.btn_Origin.Location = new System.Drawing.Point(333, 193);
+            this.btn_Origin.Location = new System.Drawing.Point(308, 192);
             this.btn_Origin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Origin.Name = "btn_Origin";
             this.btn_Origin.Size = new System.Drawing.Size(192, 46);
@@ -507,7 +507,7 @@
             // btn_MoveABS
             // 
             this.btn_MoveABS.ForeColor = System.Drawing.Color.Black;
-            this.btn_MoveABS.Location = new System.Drawing.Point(333, 145);
+            this.btn_MoveABS.Location = new System.Drawing.Point(308, 144);
             this.btn_MoveABS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_MoveABS.Name = "btn_MoveABS";
             this.btn_MoveABS.Size = new System.Drawing.Size(192, 46);
@@ -519,7 +519,7 @@
             // btn_pJog
             // 
             this.btn_pJog.ForeColor = System.Drawing.Color.Black;
-            this.btn_pJog.Location = new System.Drawing.Point(436, 81);
+            this.btn_pJog.Location = new System.Drawing.Point(411, 80);
             this.btn_pJog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_pJog.Name = "btn_pJog";
             this.btn_pJog.Size = new System.Drawing.Size(89, 59);
@@ -532,7 +532,7 @@
             // btn_nJog
             // 
             this.btn_nJog.ForeColor = System.Drawing.Color.Black;
-            this.btn_nJog.Location = new System.Drawing.Point(333, 82);
+            this.btn_nJog.Location = new System.Drawing.Point(308, 81);
             this.btn_nJog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_nJog.Name = "btn_nJog";
             this.btn_nJog.Size = new System.Drawing.Size(89, 59);
@@ -545,7 +545,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(331, 58);
+            this.label12.Location = new System.Drawing.Point(306, 57);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(54, 14);
             this.label12.TabIndex = 7;
@@ -554,7 +554,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(332, 31);
+            this.label11.Location = new System.Drawing.Point(307, 30);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 14);
             this.label11.TabIndex = 7;
@@ -589,7 +589,7 @@
             // 
             // txt_Speed
             // 
-            this.txt_Speed.Location = new System.Drawing.Point(436, 55);
+            this.txt_Speed.Location = new System.Drawing.Point(411, 54);
             this.txt_Speed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Speed.Name = "txt_Speed";
             this.txt_Speed.Size = new System.Drawing.Size(90, 23);
@@ -598,7 +598,7 @@
             // 
             // txt_Position
             // 
-            this.txt_Position.Location = new System.Drawing.Point(436, 29);
+            this.txt_Position.Location = new System.Drawing.Point(411, 28);
             this.txt_Position.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_Position.Name = "txt_Position";
             this.txt_Position.Size = new System.Drawing.Size(90, 23);
@@ -634,7 +634,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+<<<<<<< master
             this.ClientSize = new System.Drawing.Size(1048, 638);
+=======
+            this.ClientSize = new System.Drawing.Size(986, 638);
+>>>>>>> local
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_BackRetry);
             this.Controls.Add(this.btn_FrontRetry);

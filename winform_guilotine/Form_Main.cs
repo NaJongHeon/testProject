@@ -645,5 +645,30 @@ namespace winform_guilotine
             Thread gorepeat = new Thread(new ThreadStart(thr_repeat));
             gorepeat.Start();
         }
+<<<<<<< master
+=======
+        #endregion
+
+
+        private void Form_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (m_bConnected)
+            {
+                int nRtn;
+                nRtn = FAS_EziMOTIONPlusR.FAS_ServoEnable(m_nPortNo, byte.Parse(txt_Slave.Text), 0);
+                if (nRtn != FAS_EziMOTIONPlusR.FMM_OK)
+                {
+                    string strMsg;
+                    strMsg = "FAS_MoveSingleAxisAbsPos() \nReturned: " + nRtn.ToString();
+                    MessageBox.Show(strMsg, "Function Failed");
+                }
+                m_bConnected = false;
+            }
+
+            m_stop = true;
+        }
+
+
+>>>>>>> local
     }
 }
