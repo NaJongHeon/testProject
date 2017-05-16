@@ -25,7 +25,8 @@ namespace winform_guilotine
         bool bIsConnBack = false;
         #region 서보관련변수
         byte m_nPortNo;
-        bool m_bConnected;
+
+        bool m_bConnected, m_stop;
         int m_mouseDown = 0;  //0 : None 1: jog- 2: jog+
         int m_PosAct = 0;
         int m_PosCom = 0;
@@ -362,7 +363,6 @@ namespace winform_guilotine
 
 
         }
-
         public void run2()  //POS Data 가져오기
         {
             try
@@ -387,7 +387,6 @@ namespace winform_guilotine
 
             }
         }
-
         private void SettextAct(string text)
         {
             try
@@ -484,7 +483,6 @@ namespace winform_guilotine
                 }
             }
         }
-        #endregion
         private void btn_ServoConn_Click(object sender, EventArgs e)
         {
             if (txt_servoPort.Text == null)
@@ -537,7 +535,6 @@ namespace winform_guilotine
                 //cmb_servoPort.Enabled = true;
             }
         }
-
         private void btn_ServoOn_Click(object sender, EventArgs e)
         {
             byte iSlaveNo;
@@ -567,7 +564,6 @@ namespace winform_guilotine
             //        btnGroup_Servoset[iLoof].Enabled = true;
             //}
         }
-
         private void btn_nJog_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -577,14 +573,12 @@ namespace winform_guilotine
                 jogDown.Start();
             }
         }
-
         private void btn_nJog_MouseUp(object sender, MouseEventArgs e)
         {
             Thread jogDown = new Thread(new ThreadStart(run));
             jogDown.Start();
             m_mouseDown = 0;
         }
-
         private void btn_pJog_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -594,14 +588,12 @@ namespace winform_guilotine
                 jogDown.Start();
             }
         }
-
         private void btn_pJog_MouseUp(object sender, MouseEventArgs e)
         {
             Thread jogDown = new Thread(new ThreadStart(run));
             jogDown.Start();
             m_mouseDown = 0;
         }
-
         private void btn_MoveABS_Click(object sender, EventArgs e)
         {
             byte iSlaveNo;
@@ -631,7 +623,6 @@ namespace winform_guilotine
                 MessageBox.Show(strMsg, "Function Failed");
             }
         }
-
         private void btn_Origin_Click(object sender, EventArgs e)
         {
             if (m_bConnected)
@@ -639,11 +630,32 @@ namespace winform_guilotine
                 FAS_EziMOTIONPlusR.FAS_MoveOriginSingleAxis(m_nPortNo, byte.Parse(txt_Slave.Text));
             }
         }
-
         private void btn_StartRepeat_Click(object sender, EventArgs e)
         {
             Thread gorepeat = new Thread(new ThreadStart(thr_repeat));
             gorepeat.Start();
         }
+        #endregion
+
+
+        private void Form_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (m_bConnected)
+            {
+                int nRtn;
+                nRtn = FAS_EziMOTIONPlusR.FAS_ServoEnable(m_nPortNo, byte.Parse(txt_Slave.Text), 0);
+                if (nRtn != FAS_EziMOTIONPlusR.FMM_OK)
+                {
+                    string strMsg;
+                    strMsg = "FAS_MoveSingleAxisAbsPos() \nReturned: " + nRtn.ToString();
+                    MessageBox.Show(strMsg, "Function Failed");
+                }
+                m_bConnected = false;
+            }
+
+            m_stop = true;
+        }
+
+
     }
 }
