@@ -25,7 +25,7 @@ namespace winform_guilotine
         bool bIsConnBack = false;
         #region 서보관련변수
         byte m_nPortNo;
-        bool m_bConnected;
+        bool m_bConnected, m_stop;
         int m_mouseDown = 0;  //0 : None 1: jog- 2: jog+
         int m_PosAct = 0;
         int m_PosCom = 0;
@@ -513,7 +513,7 @@ namespace winform_guilotine
                 }
                 else
                 {
-                    //m_bConnected = true;
+                    m_bConnected = true;
                     btn_ServoConn.Text = "Disconnect";
                     //cmb_servoPort.Enabled = false;
                     //btn_ServoOn.Enabled = true;
@@ -645,5 +645,25 @@ namespace winform_guilotine
             Thread gorepeat = new Thread(new ThreadStart(thr_repeat));
             gorepeat.Start();
         }
+
+
+        private void Form_Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (m_bConnected)
+            {
+                int nRtn;
+                nRtn = FAS_EziMOTIONPlusR.FAS_ServoEnable(m_nPortNo, byte.Parse(txt_Slave.Text), 0);
+                if (nRtn != FAS_EziMOTIONPlusR.FMM_OK)
+                {
+                    string strMsg;
+                    strMsg = "FAS_MoveSingleAxisAbsPos() \nReturned: " + nRtn.ToString();
+                    MessageBox.Show(strMsg, "Function Failed");
+                }
+                m_bConnected = false;
+            }
+
+            m_stop = true;
+        }
+
     }
 }
