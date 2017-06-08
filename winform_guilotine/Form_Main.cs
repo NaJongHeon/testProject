@@ -511,7 +511,7 @@ namespace winform_guilotine
                 }
                 else
                 {
-                    //m_bConnected = true;
+                    m_bConnected = true;
                     btn_ServoConn.Text = "Disconnect";
                     //cmb_servoPort.Enabled = false;
                     //btn_ServoOn.Enabled = true;
