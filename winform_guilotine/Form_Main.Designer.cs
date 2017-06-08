@@ -39,6 +39,7 @@
             this.txt_LightLog = new System.Windows.Forms.TextBox();
             this.btn_FrontRetry = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_ServoStop = new System.Windows.Forms.Button();
             this.txt_servoPort = new System.Windows.Forms.TextBox();
             this.txt_POSError = new System.Windows.Forms.TextBox();
             this.txt_POSCommand = new System.Windows.Forms.TextBox();
@@ -68,9 +69,13 @@
             this.txt_Position = new System.Windows.Forms.TextBox();
             this.btn_ServoOn = new System.Windows.Forms.Button();
             this.btn_ServoConn = new System.Windows.Forms.Button();
-            this.btn_ServoStop = new System.Windows.Forms.Button();
+            this.groupbox2 = new System.Windows.Forms.GroupBox();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.btn_CamInit = new System.Windows.Forms.Button();
+            this.btn_CamRelease = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupbox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -228,6 +233,17 @@
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Servo_Control";
+            // 
+            // btn_ServoStop
+            // 
+            this.btn_ServoStop.ForeColor = System.Drawing.Color.Black;
+            this.btn_ServoStop.Location = new System.Drawing.Point(6, 98);
+            this.btn_ServoStop.Name = "btn_ServoStop";
+            this.btn_ServoStop.Size = new System.Drawing.Size(293, 47);
+            this.btn_ServoStop.TabIndex = 21;
+            this.btn_ServoStop.Text = "STOP";
+            this.btn_ServoStop.UseVisualStyleBackColor = true;
+            this.btn_ServoStop.Click += new System.EventHandler(this.btn_ServoStop_Click);
             // 
             // txt_servoPort
             // 
@@ -518,16 +534,37 @@
             this.btn_ServoConn.UseVisualStyleBackColor = true;
             this.btn_ServoConn.Click += new System.EventHandler(this.btn_ServoConn_Click);
             // 
-            // btn_ServoStop
+            // groupbox2
             // 
-            this.btn_ServoStop.ForeColor = System.Drawing.Color.Black;
-            this.btn_ServoStop.Location = new System.Drawing.Point(6, 98);
-            this.btn_ServoStop.Name = "btn_ServoStop";
-            this.btn_ServoStop.Size = new System.Drawing.Size(293, 47);
-            this.btn_ServoStop.TabIndex = 21;
-            this.btn_ServoStop.Text = "STOP";
-            this.btn_ServoStop.UseVisualStyleBackColor = true;
-            this.btn_ServoStop.Click += new System.EventHandler(this.btn_ServoStop_Click);
+            this.groupbox2.Controls.Add(this.btn_CamRelease);
+            this.groupbox2.Controls.Add(this.btn_CamInit);
+            this.groupbox2.Location = new System.Drawing.Point(331, 2);
+            this.groupbox2.Name = "groupbox2";
+            this.groupbox2.Size = new System.Drawing.Size(646, 380);
+            this.groupbox2.TabIndex = 11;
+            this.groupbox2.TabStop = false;
+            // 
+            // btn_CamInit
+            // 
+            this.btn_CamInit.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_CamInit.Location = new System.Drawing.Point(29, 330);
+            this.btn_CamInit.Name = "btn_CamInit";
+            this.btn_CamInit.Size = new System.Drawing.Size(129, 41);
+            this.btn_CamInit.TabIndex = 1;
+            this.btn_CamInit.Text = "Cam Initialize";
+            this.btn_CamInit.UseVisualStyleBackColor = true;
+            this.btn_CamInit.Click += new System.EventHandler(this.btn_CamInit_Click);
+            // 
+            // btn_CamRelease
+            // 
+            this.btn_CamRelease.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_CamRelease.Location = new System.Drawing.Point(164, 329);
+            this.btn_CamRelease.Name = "btn_CamRelease";
+            this.btn_CamRelease.Size = new System.Drawing.Size(129, 41);
+            this.btn_CamRelease.TabIndex = 2;
+            this.btn_CamRelease.Text = "Cam Release";
+            this.btn_CamRelease.UseVisualStyleBackColor = true;
+            this.btn_CamRelease.Click += new System.EventHandler(this.btn_CamRelease_Click);
             // 
             // Form_Main
             // 
@@ -535,6 +572,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(986, 638);
+            this.Controls.Add(this.groupbox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_FrontRetry);
             this.Controls.Add(this.groupBox1);
@@ -546,6 +584,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupbox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -594,6 +633,10 @@
         private System.Windows.Forms.Button btn_ServoConn;
         private System.Windows.Forms.TextBox txt_servoPort;
         private System.Windows.Forms.Button btn_ServoStop;
+        private System.Windows.Forms.GroupBox groupbox2;
+        private System.Windows.Forms.Button btn_CamInit;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button btn_CamRelease;
     }
 }
 
