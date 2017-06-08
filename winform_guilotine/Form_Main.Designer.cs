@@ -37,16 +37,7 @@
             this.btn_FrontSet = new System.Windows.Forms.Button();
             this.txt_FrontValue = new System.Windows.Forms.TextBox();
             this.txt_LightLog = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_BackOff = new System.Windows.Forms.Button();
-            this.btn_BackOn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_BackSet = new System.Windows.Forms.Button();
-            this.txt_BackValue = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.scr_BackValue = new System.Windows.Forms.HScrollBar();
             this.btn_FrontRetry = new System.Windows.Forms.Button();
-            this.btn_BackRetry = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_servoPort = new System.Windows.Forms.TextBox();
             this.txt_POSError = new System.Windows.Forms.TextBox();
@@ -77,8 +68,8 @@
             this.txt_Position = new System.Windows.Forms.TextBox();
             this.btn_ServoOn = new System.Windows.Forms.Button();
             this.btn_ServoConn = new System.Windows.Forms.Button();
+            this.btn_ServoStop = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -182,102 +173,8 @@
             this.txt_LightLog.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_LightLog.Multiline = true;
             this.txt_LightLog.Name = "txt_LightLog";
-            this.txt_LightLog.Size = new System.Drawing.Size(625, 130);
+            this.txt_LightLog.Size = new System.Drawing.Size(313, 130);
             this.txt_LightLog.TabIndex = 7;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.btn_BackOff);
-            this.groupBox2.Controls.Add(this.btn_BackOn);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.btn_BackSet);
-            this.groupBox2.Controls.Add(this.txt_BackValue);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.scr_BackValue);
-            this.groupBox2.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(331, 145);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(306, 186);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Back_Light_Control";
-            this.groupBox2.UseCompatibleTextRendering = true;
-            // 
-            // btn_BackOff
-            // 
-            this.btn_BackOff.ForeColor = System.Drawing.Color.Black;
-            this.btn_BackOff.Location = new System.Drawing.Point(178, 121);
-            this.btn_BackOff.Name = "btn_BackOff";
-            this.btn_BackOff.Size = new System.Drawing.Size(101, 56);
-            this.btn_BackOff.TabIndex = 13;
-            this.btn_BackOff.Text = "Light Off";
-            this.btn_BackOff.UseVisualStyleBackColor = true;
-            this.btn_BackOff.Click += new System.EventHandler(this.btn_BackOff_Click);
-            // 
-            // btn_BackOn
-            // 
-            this.btn_BackOn.ForeColor = System.Drawing.Color.Black;
-            this.btn_BackOn.Location = new System.Drawing.Point(17, 123);
-            this.btn_BackOn.Name = "btn_BackOn";
-            this.btn_BackOn.Size = new System.Drawing.Size(101, 56);
-            this.btn_BackOn.TabIndex = 12;
-            this.btn_BackOn.Text = "Light On";
-            this.btn_BackOn.UseVisualStyleBackColor = true;
-            this.btn_BackOn.Click += new System.EventHandler(this.btn_BackOn_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(205, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 14);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "255(어두움)";
-            // 
-            // btn_BackSet
-            // 
-            this.btn_BackSet.ForeColor = System.Drawing.Color.Black;
-            this.btn_BackSet.Location = new System.Drawing.Point(164, 76);
-            this.btn_BackSet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_BackSet.Name = "btn_BackSet";
-            this.btn_BackSet.Size = new System.Drawing.Size(136, 42);
-            this.btn_BackSet.TabIndex = 4;
-            this.btn_BackSet.Text = "Set Brightness";
-            this.btn_BackSet.UseVisualStyleBackColor = true;
-            this.btn_BackSet.Click += new System.EventHandler(this.btn_BackSet_Click);
-            // 
-            // txt_BackValue
-            // 
-            this.txt_BackValue.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txt_BackValue.Location = new System.Drawing.Point(4, 76);
-            this.txt_BackValue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_BackValue.Name = "txt_BackValue";
-            this.txt_BackValue.Size = new System.Drawing.Size(136, 44);
-            this.txt_BackValue.TabIndex = 3;
-            this.txt_BackValue.Text = "0";
-            this.txt_BackValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 14);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "0(밝음)";
-            // 
-            // scr_BackValue
-            // 
-            this.scr_BackValue.Location = new System.Drawing.Point(17, 44);
-            this.scr_BackValue.Maximum = 264;
-            this.scr_BackValue.Name = "scr_BackValue";
-            this.scr_BackValue.Size = new System.Drawing.Size(262, 30);
-            this.scr_BackValue.TabIndex = 6;
-            this.scr_BackValue.Scroll += new System.Windows.Forms.ScrollEventHandler(this.scr_BackValue_Scroll);
             // 
             // btn_FrontRetry
             // 
@@ -289,18 +186,9 @@
             this.btn_FrontRetry.UseVisualStyleBackColor = true;
             this.btn_FrontRetry.Click += new System.EventHandler(this.btn_FrontRetry_Click);
             // 
-            // btn_BackRetry
-            // 
-            this.btn_BackRetry.Location = new System.Drawing.Point(413, 336);
-            this.btn_BackRetry.Name = "btn_BackRetry";
-            this.btn_BackRetry.Size = new System.Drawing.Size(136, 41);
-            this.btn_BackRetry.TabIndex = 9;
-            this.btn_BackRetry.Text = "Back Connect Retry";
-            this.btn_BackRetry.UseVisualStyleBackColor = true;
-            this.btn_BackRetry.Click += new System.EventHandler(this.btn_BackRetry_Click);
-            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btn_ServoStop);
             this.groupBox3.Controls.Add(this.txt_servoPort);
             this.groupBox3.Controls.Add(this.txt_POSError);
             this.groupBox3.Controls.Add(this.txt_POSCommand);
@@ -332,7 +220,7 @@
             this.groupBox3.Controls.Add(this.btn_ServoConn);
             this.groupBox3.Font = new System.Drawing.Font("굴림", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(12, 382);
+            this.groupBox3.Location = new System.Drawing.Point(12, 378);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -399,6 +287,7 @@
             this.txt_RepeatCount.Name = "txt_RepeatCount";
             this.txt_RepeatCount.Size = new System.Drawing.Size(90, 23);
             this.txt_RepeatCount.TabIndex = 14;
+            this.txt_RepeatCount.Text = "0";
             this.txt_RepeatCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label16
@@ -608,12 +497,12 @@
             // btn_ServoOn
             // 
             this.btn_ServoOn.ForeColor = System.Drawing.Color.Black;
-            this.btn_ServoOn.Location = new System.Drawing.Point(166, 179);
+            this.btn_ServoOn.Location = new System.Drawing.Point(163, 179);
             this.btn_ServoOn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ServoOn.Name = "btn_ServoOn";
             this.btn_ServoOn.Size = new System.Drawing.Size(136, 59);
             this.btn_ServoOn.TabIndex = 2;
-            this.btn_ServoOn.Text = "Servo ON";
+            this.btn_ServoOn.Text = "Servo On";
             this.btn_ServoOn.UseVisualStyleBackColor = true;
             this.btn_ServoOn.Click += new System.EventHandler(this.btn_ServoOn_Click);
             // 
@@ -629,25 +518,32 @@
             this.btn_ServoConn.UseVisualStyleBackColor = true;
             this.btn_ServoConn.Click += new System.EventHandler(this.btn_ServoConn_Click);
             // 
+            // btn_ServoStop
+            // 
+            this.btn_ServoStop.ForeColor = System.Drawing.Color.Black;
+            this.btn_ServoStop.Location = new System.Drawing.Point(6, 98);
+            this.btn_ServoStop.Name = "btn_ServoStop";
+            this.btn_ServoStop.Size = new System.Drawing.Size(293, 47);
+            this.btn_ServoStop.TabIndex = 21;
+            this.btn_ServoStop.Text = "STOP";
+            this.btn_ServoStop.UseVisualStyleBackColor = true;
+            this.btn_ServoStop.Click += new System.EventHandler(this.btn_ServoStop_Click);
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1048, 638);
             this.ClientSize = new System.Drawing.Size(986, 638);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btn_BackRetry);
             this.Controls.Add(this.btn_FrontRetry);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txt_LightLog);
             this.Name = "Form_Main";
             this.Text = "길로틴 조명 컨트롤러";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Main_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -664,18 +560,9 @@
         private System.Windows.Forms.HScrollBar scr_FrontValue;
         private System.Windows.Forms.Button btn_FrontSet;
         private System.Windows.Forms.TextBox txt_FrontValue;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.HScrollBar scr_BackValue;
-        private System.Windows.Forms.Button btn_BackSet;
-        private System.Windows.Forms.TextBox txt_BackValue;
         private System.Windows.Forms.Button btn_FrontRetry;
-        private System.Windows.Forms.Button btn_BackRetry;
         private System.Windows.Forms.Button btn_FrontOff;
         private System.Windows.Forms.Button btn_FrontOn;
-        private System.Windows.Forms.Button btn_BackOff;
-        private System.Windows.Forms.Button btn_BackOn;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txt_POSError;
         private System.Windows.Forms.TextBox txt_POSCommand;
@@ -706,6 +593,7 @@
         private System.Windows.Forms.Button btn_ServoOn;
         private System.Windows.Forms.Button btn_ServoConn;
         private System.Windows.Forms.TextBox txt_servoPort;
+        private System.Windows.Forms.Button btn_ServoStop;
     }
 }
 

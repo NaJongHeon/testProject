@@ -6,3 +6,12 @@ D:\VS\winform_guilotine\winform_guilotine\obj\Release\winform_guilotine.Properti
 D:\VS\winform_guilotine\winform_guilotine\obj\Release\winform_guilotine.csproj.GenerateResource.Cache
 D:\VS\winform_guilotine\winform_guilotine\obj\Release\winform_guilotine.exe
 D:\VS\winform_guilotine\winform_guilotine\obj\Release\winform_guilotine.pdb
+D:\001_Project\testProject\winform_guilotine\bin\Release\winform_guilotine.exe.config
+D:\001_Project\testProject\winform_guilotine\obj\Release\winform_guilotine.exe
+D:\001_Project\testProject\winform_guilotine\obj\Release\winform_guilotine.pdb
+D:\001_Project\testProject\winform_guilotine\bin\Release\winform_guilotine.exe
+D:\001_Project\testProject\winform_guilotine\bin\Release\winform_guilotine.pdb
+D:\001_Project\testProject\winform_guilotine\obj\Release\winform_guilotine.csprojResolveAssemblyReference.cache
+D:\001_Project\testProject\winform_guilotine\obj\Release\winform_guilotine.Form_Main.resources
+D:\001_Project\testProject\winform_guilotine\obj\Release\winform_guilotine.Properties.Resources.resources
+D:\001_Project\testProject\winform_guilotine\obj\Release\winform_guilotine.csproj.GenerateResource.Cache

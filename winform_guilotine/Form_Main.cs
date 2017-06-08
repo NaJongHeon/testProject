@@ -66,27 +66,6 @@ namespace winform_guilotine
                 btn_FrontRetry.Visible = true;
                 setEnableList(0, false);
             }
-
-
-            //back control list
-            listBack = new List<Control>();
-            foreach (Control x in groupBox2.Controls)
-            {
-                listBack.Add(x);
-            }
-            setEnableList(1, false);
-
-            bIsConnBack = conntry(1);
-            if (bIsConnBack)
-            {
-                btn_BackRetry.Visible = false;
-                setEnableList(1, true);
-            }
-            else
-            {
-                btn_BackRetry.Visible = true;
-                setEnableList(1, false);
-            }
             #endregion
             //서보 초기화
             m_nPortNo = 0;
@@ -239,70 +218,6 @@ namespace winform_guilotine
         {
             frontlight.sendData("a0");
         }
-
-        #endregion
-
-        #region BackLight Event
-
-
-        private void scr_BackValue_Scroll(object sender, ScrollEventArgs e)
-        {
-            if (scr_BackValue.Value > 255)
-            {
-                txt_BackValue.Text = "255";
-            }
-            else if (scr_BackValue.Value < 0)
-            {
-                txt_BackValue.Text = "0";
-            }
-            else
-            {
-                txt_BackValue.Text = scr_BackValue.Value.ToString();
-            }
-
-            if (backlight.objSerialPort.IsOpen)
-            {
-                if (e.Type == ScrollEventType.EndScroll)
-                {
-                    backlight.sendData(txt_BackValue.Text);
-                    txt_LightLog.Text = "Back 조명값 : " + txt_BackValue.Text + "\r\n" + txt_LightLog.Text;
-                }
-            }
-        }
-        private void btn_BackSet_Click(object sender, EventArgs e)
-        {
-            if (backlight.objSerialPort.IsOpen)
-            {
-                backlight.sendData(txt_BackValue.Text);
-            }
-            txt_LightLog.Text = "Back 조명값 : " + txt_BackValue.Text + "\r\n" + txt_LightLog.Text;
-        }
-
-        private void btn_BackRetry_Click(object sender, EventArgs e)
-        {
-            if (conntry(1))
-            {
-                setEnableList(1, true);
-                btn_BackRetry.Visible = false;
-            }
-            else
-            {
-                setEnableList(1, false);
-                btn_BackRetry.Visible = true;
-            }
-        }
-
-        private void btn_BackOn_Click(object sender, EventArgs e)
-        {
-            frontlight.sendData("b1");
-        }
-
-        private void btn_BackOff_Click(object sender, EventArgs e)
-        {
-            frontlight.sendData("b0");
-        }
-
-
 
         #endregion
 
@@ -528,10 +443,13 @@ namespace winform_guilotine
             }
             else
             {
+                byte iSlaveNo = byte.Parse(txt_Slave.Text);
+                FAS_EziMOTIONPlusR.FAS_ServoEnable(m_nPortNo, iSlaveNo, 0);
                 FAS_EziMOTIONPlusR.FAS_Close(m_nPortNo);
                 m_bConnected = false;
 
                 btn_ServoConn.Text = "Connect";
+                btn_ServoOn.Text = "Servo On";
                 //cmb_servoPort.Enabled = true;
             }
         }
@@ -541,7 +459,9 @@ namespace winform_guilotine
             int nRtn;
 
             if (m_bConnected == false)
+            {
                 return;
+            }
 
             if (txt_Slave.Text.Length <= 0)
             {
@@ -550,14 +470,29 @@ namespace winform_guilotine
             }
 
             iSlaveNo = byte.Parse(txt_Slave.Text);
-
+ 
             nRtn = FAS_EziMOTIONPlusR.FAS_ServoEnable(m_nPortNo, iSlaveNo, 1);
             if (nRtn != FAS_EziMOTIONPlusR.FMM_OK)
             {
                 string strMsg;
                 strMsg = "FAS_ServoEnable() \nReturned: " + nRtn.ToString();
                 MessageBox.Show(strMsg, "Function Failed");
+                btn_ServoOn.Text = "Servo On";
             }
+            else
+            {
+                if(btn_ServoOn.Text=="Servo On")
+                {
+                    btn_ServoOn.Text = "Servo Off";
+                }
+                else
+                {
+                    FAS_EziMOTIONPlusR.FAS_ServoEnable(m_nPortNo, iSlaveNo, 0);
+                    btn_ServoOn.Text = "Servo On";
+                }
+                
+            }
+            
             //for (int iLoof = 0; iLoof < btnGroup_Servoset.Length; iLoof++)
             //{
             //    if (btnGroup_Servoset[iLoof] != null)
@@ -637,6 +572,20 @@ namespace winform_guilotine
         }
         #endregion
 
+
+
+
+        private void btn_ServoStop_Click(object sender, EventArgs e)
+        {
+            if (m_bConnected)
+            {
+                m_nPortNo = byte.Parse(txt_servoPort.Text);
+                byte mSlave = byte.Parse(txt_Slave.Text);
+                txt_RepeatCount.Text = "0";
+                FAS_EziMOTIONPlusR.FAS_MoveStop(m_nPortNo, mSlave);
+                //FAS_EziMOTIONPlusR.FAS_EmergencyStop(m_nPortNo, mSlave);
+            }
+        }
 
         private void Form_Main_FormClosing(object sender, FormClosingEventArgs e)
         {

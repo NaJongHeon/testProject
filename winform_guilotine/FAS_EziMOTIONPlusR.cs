@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 
+
 class FAS_EziMOTIONPlusR
 {
     // Referred by ReturnCodes_Define.h
